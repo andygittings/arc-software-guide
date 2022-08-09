@@ -16,6 +16,10 @@ By loading the module for a certain installed application, the environment varia
 The ARC/HTC software environment comprises a mixture of commercial applications, software built using the EasyBuild framework and software built using our own local
 build recipes. We use the environment modules system (via the **module** command) to load applications into the environment on ARC/HTC.
 
+The list of available modules differs between login nodes and compute/interactive nodes - therefore you **must** always check for the module/version you require in an **interactive** session (which will run on a compute note) as follows::
+   
+   srun -p interactive --pty /bin/bash
+
 However. because the EasyBuild framework adds many new module components into the module list - the best way to search for an application you require
 is by using the module spider command. For example, to search for the GROMACS application::
 
